@@ -1,6 +1,7 @@
 import './App.css';
 import SearchBar from './SearchBar/SearchBar';
 import EmbedVideo from './EmbedVideo/EmbedVideo';
+import googleApIKey from './googleApIKey/googleApIKey';
 
 function App() {
   return (
