@@ -1,10 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-import React, { Component } from 'react';
-
-
-
-
 const EmbedVideo = (props) =>{
     return (
     <>
