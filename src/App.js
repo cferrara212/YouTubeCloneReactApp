@@ -1,17 +1,27 @@
 import './App.css';
-import SearchBar from './SearchBar/SearchBar';
 import EmbedVideo from './EmbedVideo/EmbedVideo';
-import googleApIKey from './googleApIKey/googleApIKey';
+import { googleAPIKey } from './keys.js';
+import { IframeHTMLAttributes } from 'react';
+import SearchBar from './Components/SearchBar/SearchBar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-        
-        </p>
-      </header>
+    <div className='App'>
+      <SearchBar />
+      <div className='videoplayer'>
+        <body>
+          <p>This is the Main App</p>
+          <iframe
+            title='yplayer'
+            id='ytplayer'
+            type='text/html'
+            width='640'
+            height='360'
+            src='https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com'
+            frameborder='0'
+          ></iframe>
+        </body>
+      </div>
     </div>
   );
 }

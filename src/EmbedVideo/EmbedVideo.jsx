@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 
 const EmbedVideo = (props) =>{
-    pass
+    <h1>The Video goes here</h1>;
 }
 
 export default EmbedVideo;
