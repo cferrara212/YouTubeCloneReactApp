@@ -3,31 +3,28 @@ import EmbedVideo from './EmbedVideo/EmbedVideo';
 import { googleAPIKey } from './keys.js';
 import { IframeHTMLAttributes } from 'react';
 import SearchBar from './Components/SearchBar/SearchBar';
-
+import { Container,Col,Row } from 'react-bootstrap';
+import React from 'react'
+import VideoSuggestion from './Components/VideoSuggestion/VideoSuggestion';
 function App() {
   return (
-    <div
-      className='row'
-      row-spacer
-      padding-button='10px'
-      justify-content='center'
-    >
-      <div className='col-md-12' id='search'>
-        <div className='col-md-12'>
-          <div className='col-md-12' id='none2-'>
-            <div className='col-md-10' id='none3'>
-              <SearchBar />
-            </div>
-            <div className='col-md-8' id='none1'>
+        <Container>
+          <Row>
+            <Col style={{border:"2px solid blue"}}><SearchBar /></Col>
+          </Row>
+          <Row>
+            <Col xs={12} lg={8} style={{border:"2px solid blue"}}>
               <EmbedVideo />
-            </div>
-            <div className='col-md-4' id='none4'>
-              {/* Video List*/}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+              </Col>
+            <Col xs={12} lg={4} style={{border:"2px solid blue"}}>
+              <VideoSuggestion />
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={12} lg={8} style={{border:"2px solid blue"}}>Messages</Col>
+           
+          </Row>
+        </Container>
   );
 }
 
