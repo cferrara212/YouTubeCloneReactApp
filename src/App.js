@@ -6,21 +6,26 @@ import SearchBar from './Components/SearchBar/SearchBar';
 
 function App() {
   return (
-    <div className='App'>
-      <SearchBar />
-      <div className='videoplayer'>
-        <body>
-          <p>This is the Main App</p>
-          <iframe
-            title='yplayer'
-            id='ytplayer'
-            type='text/html'
-            width='640'
-            height='360'
-            src='https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com'
-            frameborder='0'
-          ></iframe>
-        </body>
+    <div
+      className='row'
+      row-spacer
+      padding-button='10px'
+      justify-content='center'
+    >
+      <div className='col-md-12' id='search'>
+        <div className='col-md-12'>
+          <div className='col-md-12' id='none2-'>
+            <div className='col-md-10' id='none3'>
+              <SearchBar />
+            </div>
+            <div className='col-md-8' id='none1'>
+              <EmbedVideo />
+            </div>
+            <div className='col-md-4' id='none4'>
+              {/* Video List*/}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

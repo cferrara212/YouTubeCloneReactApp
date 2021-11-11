@@ -3,13 +3,19 @@ import styles from './SearchBar.css';
 
 const SearchBar = props => {
   return (
-    <div class='topnav'>
-      <a class='active' href='#home'>
-        Home
-      </a>
-      <div class='search-container'>
-        <input type='text' placeholder='Search..' name='search' />
-        <button type='submit'>Search</button>
+    <div class='row'>
+      <div class='column'>
+        <div class='card'>
+          <body>
+            <input
+              autocomplete='off'
+              class='searchbox'
+              type='text'
+              name='search'
+              placeholder='Search...'
+            />
+          </body>
+        </div>
       </div>
     </div>
   );
