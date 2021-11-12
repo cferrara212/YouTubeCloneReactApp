@@ -19,23 +19,37 @@ function App() {
     useEffect(() => {
       callApi();
     }, []);
-  
+    
     const callApi = async () => {
       try{
-          let result = await axios.get(`search?q=ammount=1&key=${googleAPIKey}`);
-          console.log(result.data.items[2].id.videoId);
-          setSuggested(result.data.items[2].id.videoId);
+          let result = await axios.get(`search?maxResults=10&part=snippet&key=${googleAPIKey}&type=video`);
+          console.log(result.data.items);
+          setSuggested(result.data.items);
          }
       catch(ex){
           console.log('error in API call');
       }    
     };
 
+    //snippet . thumbnails . default . url  for video id, element.id
 
+    const search = async (searchTerm) =>{
+    try{
+      let result = await axios.get(`search?q=${searchTerm}&maxResults=10&part=snippet&key=${googleAPIKey}&type=video`);
+      console.log(result.data.items);
+      setSuggested(result.data.items);
+     }
+  catch(ex){
+      console.log('error in API call');
+  } 
+    }
+
+ 
+//snippet . thumbnails . default . url  for video id, element.id
   return (
         <Container>
           <Row>
-            <Col style={{border:"2px solid blue"}}><SearchBar /></Col>
+            <Col style={{border:"2px solid blue"}}><SearchBar search={search} /></Col>
           </Row>
           <Row>
             <Col xs={12} lg={8} style={{border:"2px solid blue"}}>

@@ -1,15 +1,14 @@
+import { useEffect, useState } from 'react';
 import { ListGroup } from 'react-bootstrap';
 
-const VideoSuggestion = props => {
-  return ( 
-    <ListGroup>
-      <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-      <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-      <ListGroup.Item>Morbi leo risus</ListGroup.Item>
-      <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
-      <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-    </ListGroup>
+const VideoSuggestion = (props) => {
+  // let element = props.suggested.map((element)=>element.snippet.thumbnails.default.url)
 
+  return ( 
+       
+     <ListGroup>
+      <ListGroup.Item>ok</ListGroup.Item>
+    </ListGroup>
   );
 };
 
