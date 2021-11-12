@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 const SearchBar = props => {
   return (
     <div class='input-group mb-3'>
