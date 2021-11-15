@@ -1,4 +1,5 @@
 import React from 'react';
+import Comments from '../Comments/Comments';
 
 const Videoplayer = ({ videoId, videoTitle, videoDescription }) => {
   if (!videoId) {
@@ -21,7 +22,7 @@ const Videoplayer = ({ videoId, videoTitle, videoDescription }) => {
       />
       <h3>{videoTitle}</h3>
       <p>{videoDescription}</p>
-      
+      <Comments />
     </div>
   );
 };

@@ -46,7 +46,6 @@ const App = () => {
         videoId={selectedVideoId}
         videoTitle={selectedVideoTitle}
         videoDescription={selectedVideoDescription}/>
-      <Comments />
     </div>
   );
 };
