@@ -4,6 +4,8 @@ import Search from './Components/Search/Search';
 import youtubeApi from './Components/Api//Youtube';
 import VideoList from './Components/VideoList/VideoList';
 import VideoPlayer from './Components/VideoPlayer/VideoPlayer';
+import Comments from './Components/Comments/Comments';
+
 
 const App = () => {
   const [videosMetaInfo, setVideosMetaInfo] = useState([]);
@@ -43,8 +45,8 @@ const App = () => {
       <VideoPlayer
         videoId={selectedVideoId}
         videoTitle={selectedVideoTitle}
-        videoDescription={selectedVideoDescription}
-      />
+        videoDescription={selectedVideoDescription}/>
+      <Comments />
     </div>
   );
 };
