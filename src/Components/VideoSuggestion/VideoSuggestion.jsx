@@ -1,14 +1,15 @@
+import { queryByDisplayValue } from '@testing-library/react';
 import { useEffect, useState } from 'react';
 import { ListGroup } from 'react-bootstrap';
 
-const VideoSuggestion = (props) => {
+const VideoSuggestion = props => {
   // let element = props.suggested.map((element)=>element.snippet.thumbnails.default.url)
 
-  return ( 
-       
-     <ListGroup>
-      <ListGroup.Item>ok</ListGroup.Item>
-    </ListGroup>
+  return (
+    <div>
+      <h1>List Of Videos</h1>
+      <h3>List Of Videos</h3>
+    </div>
   );
 };
 
