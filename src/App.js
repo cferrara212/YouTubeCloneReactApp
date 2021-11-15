@@ -8,6 +8,8 @@ import VideoPlayer from './Components/VideoPlayer/VideoPlayer';
 const App = () => {
   const [videosMetaInfo, setVideosMetaInfo] = useState([]);
   const [selectedVideoId, setSelectedVideoId] = useState(null);
+  const [selectedVideoTitle, setSelectedVideoTitle] = useState(null);
+  const [selectedVideoDescription, setSelectedVideoDescription] = useState(null)
 
   const onVideoSelected = videoId => {
     setSelectedVideoId(videoId);
@@ -22,7 +24,9 @@ const App = () => {
     //console.log(response)
     setVideosMetaInfo(
       response.data.items,
-      setSelectedVideoId(response.data.items[0].id.videoId)
+      setSelectedVideoId(response.data.items[0].id.videoId),
+      setSelectedVideoTitle(response.data.items[0].snippet.title),
+      setSelectedVideoDescription(response.data.items[0].snippet.description)
     );
     //console.log(this.state);
   };
@@ -31,7 +35,7 @@ const App = () => {
     <div className='App'>
       <Search onSearch={onSearch} />
       <VideoList onVideoSelected={onVideoSelected} data={videosMetaInfo} />
-      <VideoPlayer videoId={selectedVideoId} />
+      <VideoPlayer videoId={selectedVideoId} videoTitle={selectedVideoTitle} videoDescription={selectedVideoDescription} />
     </div>
   );
 };
