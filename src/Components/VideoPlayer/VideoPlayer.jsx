@@ -22,7 +22,7 @@ const Videoplayer = ({ videoId, videoTitle, videoDescription }) => {
       />
       <h3>{videoTitle}</h3>
       <p>{videoDescription}</p>
-      <Comments />
+      <Comments videoId={videoId}/>
     </div>
   );
 };
